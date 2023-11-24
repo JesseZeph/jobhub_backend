@@ -1,5 +1,5 @@
 {
-  "name": "jobhub_backend",
+  "name": "jobhubvv2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,12 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "crypto-js": "^4.2.0",
+    "body-parser": "^1.20.2",
+    "crypto-js": "^4.1.1",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "firebase-admin": "^11.11.0",
+    "firebase-admin": "^11.10.1",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.0.1",
+    "mongoose": "^7.5.2",
     "nodemon": "^3.0.1"
   }
 }
