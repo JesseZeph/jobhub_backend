@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 3020
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const jobRouter = require('./routes/job')
