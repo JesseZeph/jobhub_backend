@@ -3,10 +3,16 @@ const app = express()
 const port = 3020
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-const jobRouter = require('./routes/job')
 const bodyParser = require('body-parser')
+const jobRouter = require('./routes/job')
+const authRouter = require('./routes/auth')
 
 dotenv.config();
+const admin = require('firebase-admin');
+const serviceAccount = require('./servicesAccountKey.json')
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount)
+})
 
 mongoose.connect(process.env.MONGO_URL)
     .then(()=> console.log('Connect to V2 Db'))
@@ -17,6 +23,7 @@ app.use(express.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.use('/api/jobs', jobRouter)
+app.use('/api/', authRouter)
 
 
 

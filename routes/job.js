@@ -13,11 +13,4 @@ router.put('/:id', jobController.updateJob);
 
 router.delete('/:id', jobController.createJob);
 
-
-
-
-
-
-
-
 module.exports = router;
