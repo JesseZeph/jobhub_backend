@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
 const jobRouter = require('./routes/job')
+const bookmarkRouter = require('./routes/bookmark')
 const authRouter = require('./routes/auth')
 
 dotenv.config();
@@ -23,9 +24,8 @@ app.use(express.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.use('/api/jobs', jobRouter)
+app.use('/api/bookmarks', bookmarkRouter)
 app.use('/api/', authRouter)
-
-
 
 
 app.listen(process.env.PORT || port, () => 
