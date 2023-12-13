@@ -4,10 +4,10 @@ const {verifyToken, verifyAndAuth, verifyAgent} = require('../middleware/verifyT
 
 router.post('/', verifyAndAuth, bookmarkController.createBookmark);
 
-router.post('/:id', verifyAndAuth, bookmarkController.deleteBookmark);
+router.get('/:id', verifyAndAuth, bookmarkController.deleteBookmark);
 
-router.post('/', verifyAndAuth, bookmarkController.getAllBookmarks);
-router.post('/bookmark/:id', verifyAndAuth, bookmarkController.getBookmark);
+router.get('/', verifyAndAuth, bookmarkController.getAllBookmarks);
+router.get('/bookmark/:id', verifyAndAuth, bookmarkController.getBookmark);
 
 
 
