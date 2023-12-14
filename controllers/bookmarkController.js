@@ -53,7 +53,7 @@ module.exports = {
         try {
             const bookmark = await Bookmark.findOne({userId: userId, job: jobId});
             if (!bookmark) {
-                return res.status(200).json({status: false, message: 'Bookmark not found'})
+                return res.status(200).json(null)
 
             }
             res.status(200).json({status: true, bookmarkId: bookmark._id});
