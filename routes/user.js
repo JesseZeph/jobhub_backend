@@ -7,7 +7,7 @@ router.put('/', verifyAndAuth, userController.updateUser);
 router.get('/', verifyAndAuth, userController.getUser);
 router.get('/:id', verifyAndAuth, userController.deleteUser);
 
-router.get('/skills', verifyAndAuth, userController.addSkills);
+router.post('/skills', verifyAndAuth, userController.addSkills);
 router.get('/skills', verifyAndAuth, userController.getSkills);
 router.get('/skills/:id', verifyAndAuth, userController.deleteSkill);
 
