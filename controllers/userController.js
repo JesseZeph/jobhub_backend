@@ -53,7 +53,7 @@ module.exports = {
             if (skills.length === 0) {
                 return res.status(200).json([])
             }
-            res.status(200).json(skills);
+            res.status(200).json({skills});
         } catch (error) {
             res.status(500).json({error: error});                             
         }
