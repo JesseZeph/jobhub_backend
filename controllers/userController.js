@@ -50,7 +50,7 @@ module.exports = {
 
         try {
             const skills = await Skills.find({userId: userId}, {createdAt: 0, updatedAt: 0, __v: 0});
-            if (skills == 0) {
+            if (skills.length === 0) {
                 return res.status(200).json([])
             }
             res.status(200).json(skills);
