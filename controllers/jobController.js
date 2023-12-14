@@ -90,7 +90,18 @@ module.exports = {
               ])
               res.status(200).json(results)
         } catch (error) {
-           res.status(500).json(error); 
+           res.status(500).json(error.message); 
         }
     },
+
+    getAgentJobs: async (req, res) => {
+        const uid = req.params.uid;
+
+        try{
+            const agentJobs = await Job.find({agentId: uid}, {__v: 0, createdAt: 0, updatedAt: 0}).sort({createdAt: -1})
+
+        }catch (error){
+
+        }
+    }
 };
