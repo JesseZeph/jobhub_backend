@@ -78,7 +78,7 @@ module.exports = {
 
   addAgent: async (req, res) => {
     const newAgent = new Agent({
-      userId: req.body.userId,
+      userId: req.body.id,
       uid: req.body.uid,
       working_hrs: req.body.working_hrs,
       hq_address: req.body.hq_address,
