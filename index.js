@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use('/api/jobs', jobRouter)
 app.use('/api/bookmarks', bookmarkRouter)
 app.use('/api/users', userRouter)
-api.user('api/applied',appliedRouter )
+app.use('/api/applied', appliedRouter)
 
 app.use('/api/', authRouter)
 
