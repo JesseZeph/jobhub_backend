@@ -122,7 +122,7 @@ module.exports = {
   getAgent: async (req, res) => {
     try {
       const agentData = await Agent.find(
-        { id: req.params.id },
+        { uid: req.params.uid },
         { createdAt: 0, updatedAt: 0, __v: 0 }
       );
       const agent = agentData[0];
