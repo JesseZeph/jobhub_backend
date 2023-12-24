@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const AgentSchema = new mongoose.Schema({
    userId: {
-       type: String, required: false
+       type: String, required: true
    },
    uid: {type: String, required: true },
    company: {type: String, required: true },
