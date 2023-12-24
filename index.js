@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
 const jobRouter = require('./routes/job')
 const userRouter = require('./routes/user')
+const appliedRouter = require('./routes/apply')
 
 const bookmarkRouter = require('./routes/bookmark')
 const authRouter = require('./routes/auth')
@@ -28,6 +29,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use('/api/jobs', jobRouter)
 app.use('/api/bookmarks', bookmarkRouter)
 app.use('/api/users', userRouter)
+api.user('api/applied',appliedRouter )
 
 app.use('/api/', authRouter)
 
